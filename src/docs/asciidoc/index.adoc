@@ -1,4 +1,4 @@
-= REST Docs 제목
+= REST Docs
 Andy Wilkinson;
 :doctype: book
 :icons: font
@@ -12,52 +12,19 @@ Andy Wilkinson;
 
 
 [[Member-단일조회]]
-=== Member 단일 조회
-.request
-include::{snippets}/member-api-test/member_get/curl-request.adoc[]
-include::{snippets}/member-api-test/member_get/http-request.adoc[]
-include::{snippets}/member-api-test/member_get/httpie-request.adoc[]
-include::{snippets}/member-api-test/member_get/request-body.adoc[]
-
-.response
-include::{snippets}/member-api-test/member_get/http-response.adoc[]
-include::{snippets}/member-api-test/member_get/response-body.adoc[]
-
+== Member 단일 조회
+operation::member-api-test/member_get[snippets='path-parameters,http-request,response-fields']
 
 [[Member-페이징-조회]]
 === Member 페이징 조회
-.request
-include::{snippets}/member-api-test/member_get_all/curl-request.adoc[]
-include::{snippets}/member-api-test/member_get_all/http-request.adoc[]
-include::{snippets}/member-api-test/member_get_all/httpie-request.adoc[]
-include::{snippets}/member-api-test/member_get_all/request-body.adoc[]
-
-.response
-include::{snippets}/member-api-test/member_get_all/http-response.adoc[]
-include::{snippets}/member-api-test/member_get_all/response-body.adoc[]
+operation::member-api-test/member_get_all[snippets='request-parameters,http-request,http-response']
 
 
 [[Member-생성]]
 === Member 생성
-.request
-include::{snippets}/member-api-test/member_create/curl-request.adoc[]
-include::{snippets}/member-api-test/member_create/http-request.adoc[]
-include::{snippets}/member-api-test/member_create/httpie-request.adoc[]
-include::{snippets}/member-api-test/member_create/request-body.adoc[]
-
-.response
-include::{snippets}/member-api-test/member_create/http-response.adoc[]
-include::{snippets}/member-api-test/member_create/response-body.adoc[]
+operation::member-api-test/member_create[snippets='request-fields,http-request,http-response']
 
 
 [[Member-수정]]
 === Member 수정
-.request
-include::{snippets}/member-api-test/member_update/curl-request.adoc[]
-include::{snippets}/member-api-test/member_update/http-request.adoc[]
-include::{snippets}/member-api-test/member_update/httpie-request.adoc[]
-include::{snippets}/member-api-test/member_update/request-body.adoc[]
-
-.response
-include::{snippets}/member-api-test/member_update/http-response.adoc[]
-include::{snippets}/member-api-test/member_update/response-body.adoc[]
+operation::member-api-test/member_update[snippets='path-parameters,request-fields,http-request,http-response']

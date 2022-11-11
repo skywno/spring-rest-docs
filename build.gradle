@@ -9,23 +9,18 @@ group = 'me.ezra'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
-asciidoctor {
-    sourceDir 'src/docs/asciidoc'
-    attributes 'snippets': file('build/generated-snippets')
+configurations {
+    asciidoctorExt
 }
 
-tasks.bootJar {
-    dependsOn(tasks.asciidoctor)
-    from("${tasks.asciidoctor.outputDir}") {
-        into("static/docs")
-    }
-}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    asciidoctorExt 'org.springframework.restdocs:spring-restdocs-asciidoctor'
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
@@ -41,6 +36,25 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
+ext {
+    snippetsDir = file('build/generated-snippets')
+}
+
 test {
     useJUnitPlatform()
+    outputs.dir snippetsDir
+}
+
+asciidoctor {
+    inputs.dir snippetsDir
+    sourceDir 'src/docs/asciidoc'
+    configurations 'asciidoctorExt'
+    dependsOn test
+}
+
+tasks.bootJar {
+    dependsOn tasks.asciidoctor
+    from("${tasks.asciidoctor.outputDir}") {
+        into("static/docs")
+    }
 }
