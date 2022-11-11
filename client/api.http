@@ -1,0 +1,25 @@
+
+GET http://localhost:8383/api/members/1
+Content-Type: application/json
+
+###
+
+GET http://localhost:8383/api/members?page=0&size=10
+Content-Type: application/json
+
+###
+POST http://localhost:8383/api/members
+Content-Type: application/json
+
+{
+"email": "zoo@bbb.com",
+"name": "zoo"
+}
+
+###
+PUT http://localhost:8383/api/members/1
+Content-Type: application/json
+
+{
+  "name": "new_Lim"
+}
