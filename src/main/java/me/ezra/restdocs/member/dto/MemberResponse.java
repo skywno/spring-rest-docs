@@ -1,7 +1,9 @@
-package me.ezra.restdocs.member;
+package me.ezra.restdocs.member.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import me.ezra.restdocs.admin.Admin;
+import me.ezra.restdocs.member.domain.Member;
 
 @AllArgsConstructor
 @Getter

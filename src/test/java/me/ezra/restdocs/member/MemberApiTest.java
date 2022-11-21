@@ -3,8 +3,6 @@ package me.ezra.restdocs.member;
 import me.ezra.restdocs.TestSupport;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
-import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders;
-import org.springframework.restdocs.request.RequestDocumentation;
 import org.springframework.restdocs.snippet.Snippet;
 
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.*;

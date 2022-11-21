@@ -1,6 +1,7 @@
-package me.ezra.restdocs.member;
+package me.ezra.restdocs.member.dto;
 
 import lombok.Getter;
+import me.ezra.restdocs.member.domain.Member;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;

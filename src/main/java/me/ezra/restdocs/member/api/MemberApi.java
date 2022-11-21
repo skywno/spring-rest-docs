@@ -1,6 +1,11 @@
-package me.ezra.restdocs.member;
+package me.ezra.restdocs.member.api;
 
 import lombok.RequiredArgsConstructor;
+import me.ezra.restdocs.member.MemberRepository;
+import me.ezra.restdocs.member.domain.Member;
+import me.ezra.restdocs.member.dto.MemberModificationRequest;
+import me.ezra.restdocs.member.dto.MemberResponse;
+import me.ezra.restdocs.member.dto.MemberSignUpRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

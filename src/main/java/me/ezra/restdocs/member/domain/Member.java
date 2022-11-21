@@ -1,4 +1,4 @@
-package me.ezra.restdocs.member;
+package me.ezra.restdocs.member.domain;
 
 import lombok.AccessLevel;
 import lombok.Getter;
