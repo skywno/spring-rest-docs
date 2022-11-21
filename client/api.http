@@ -23,3 +23,19 @@ Content-Type: application/json
 {
   "name": "new_Lim"
 }
+
+
+###
+PUT http://localhost:8383/api/admins/1
+Content-Type: application/json
+
+{
+"password": "new_password!!!!"
+}
+
+###
+GET http://localhost:8383/api/admins?page=0&size=10
+Content-Type: application/json
+
+###
+
